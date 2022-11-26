@@ -1,4 +1,5 @@
 import shutil
+import os 
 
 
 def header():
@@ -87,15 +88,16 @@ def html(filepath):
 
 def main():
     shutil.copy('style.css', './public/style.css')
+    shutil.copy('CNAME', './public/CNAME')
     shutil.copy('./private/images/electronic-components.jpg', './public/electronic-components.jpg')
 
     article = 'index.html'
     with open(f'./public/{article}', 'w') as f:
         f.write(html(f'./private/pages/{article}'))
         
-    article = 'electronic_components.html'
-    with open(f'./public/{article}', 'w') as f:
-        f.write(html(f'./private/articles/{article}'))
-
+    articles_folder = './private/articles/'
+    for article in os.listdir(articles_folder):
+        with open(f'./public/{article}', 'w') as f:
+            f.write(html(f'{articles_folder}{article}'))
 
 main() 
