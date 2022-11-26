@@ -93,7 +93,7 @@ def main():
 
     article = 'index.html'
     with open(f'./public/{article}', 'w') as f:
-        f.write(html(f'{article}'))
+        f.write(f'{article}')
         
     articles_folder = './private/articles/'
     for article in os.listdir(articles_folder):
