@@ -92,8 +92,10 @@ def main():
     shutil.copy('./private/images/electronic-components.jpg', './public/electronic-components.jpg')
 
     article = 'index.html'
+    with open(f'{article}', 'w') as f:
+        content = f.read()
     with open(f'./public/{article}', 'w') as f:
-        f.write(f'{article}')
+        f.write(content)
         
     articles_folder = './private/articles/'
     for article in os.listdir(articles_folder):
