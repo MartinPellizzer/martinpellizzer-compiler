@@ -92,7 +92,7 @@ def main():
     shutil.copy('./private/images/electronic-components.jpg', './public/electronic-components.jpg')
 
     article = 'index.html'
-    with open(f'{article}', 'w') as f:
+    with open(article) as f:
         content = f.read()
     with open(f'./public/{article}', 'w') as f:
         f.write(content)
