@@ -1,6 +1,6 @@
-robocopy .\public ..\mp\ /E
+robocopy .\public ..\martinpellizzer\ /E
 cd ..
-cd mp
+cd martinpellizzer
 git add .
 git commit -m "'"
 git push
