@@ -5,4 +5,4 @@ git add .
 git commit -m "'"
 git push
 cd ..
-cd martinpellizzer_compiler
+cd martinpellizzer-compiler
